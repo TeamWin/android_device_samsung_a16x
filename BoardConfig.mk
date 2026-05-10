@@ -31,7 +31,6 @@ TARGET_BOARD_PLATFORM := universal8535
 TARGET_CPU_SMP := true
 ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
-TARGET_USES_64_BIT_BINDER := true
 
 # Display
 TW_FRAMERATE := 90
@@ -40,7 +39,7 @@ TW_THEME := portrait_hdpi
 TW_DEFAULT_BRIGHTNESS := 255
 TARGET_SCREEN_DENSITY := 450
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel/brightness"
+TW_BRIGHTNESS_PATH := /sys/class/backlight/panel/brightness
 
 # Status Bar UI
 TW_STATUS_ICONS_ALIGN := center
@@ -82,7 +81,7 @@ BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := erofs
 TARGET_COPY_OUT_VENDOR := vendor
 BOARD_SUPER_PARTITION_SIZE := 9126805504 # TODO: Fix hardcoded value
 BOARD_SUPER_PARTITION_GROUPS := samsung_dynamic_partitions
-BOARD_SAMSUNG_DYNAMIC_PARTITIONS_PARTITION_LIST := system system system vendor product odm system_ext vendor_dlkm
+BOARD_SAMSUNG_DYNAMIC_PARTITIONS_PARTITION_LIST := system vendor product odm system_ext vendor_dlkm
 BOARD_SAMSUNG_DYNAMIC_PARTITIONS_SIZE := 9122611200 # TODO: Fix hardcoded value
 
 # System as root
@@ -110,7 +109,7 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 # Crypto
 PLATFORM_SECURITY_PATCH := 2099-12-31
 VENDOR_SECURITY_PATCH := 2099-12-31
-PLATFORM_VERSION := 14
+PLATFORM_VERSION := 16.0.0
 TW_INCLUDE_CRYPTO := false
 TW_INCLUDE_CRYPTO_FBE := false
 TW_INCLUDE_FBE_METADATA_DECRYPT := false
@@ -194,7 +193,7 @@ PB_TORCH_PATH := "/sys/devices/virtual/camera/flash/rear_flash"
 PB_TORCH_MAX_BRIGHTNESS := 1
 
 # Version/Maintainer
-TW_DEVICE_VERSION := SavedByLight Stable
+TW_DEVICE_VERSION := SavedByLight 16.0.0 Beta
 SHRP_MAINTAINER := SavedByLight
 OF_MAINTAINER := SavedByLight
 MAINTAINER := SavedByLight
