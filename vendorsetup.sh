@@ -7,7 +7,7 @@
 # For building with minimal manifest
 export ALLOW_MISSING_DEPENDENCIES=true
 
-FDEVICE="taro"
+FDEVICE="s5e8535"
 
 fox_get_target_device() {
 local chkdev=$(echo "$BASH_SOURCE" | grep -w $FDEVICE)
@@ -74,7 +74,7 @@ export OF_UNBIND_SDCARD_F2FS=1
 export FOX_RECOVERY_INSTALL_PARTITION=/dev/block/by-name/recovery
 export FOX_RECOVERY_SYSTEM_PARTITION=/dev/block/mapper/system
 export FOX_RECOVERY_VENDOR_PARTITION=/dev/block/mapper/vendor
-export FOX_TARGET_DEVICES="m55,m55xq"
+export FOX_TARGET_DEVICES="m35x"
 
 # R12 build vars
 export FOX_R12=1
